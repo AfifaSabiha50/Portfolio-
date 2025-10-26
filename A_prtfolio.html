@@ -1,0 +1,198 @@
+<!--
+  Portfolio: Afifa Islam Chowdhury Sabihah
+  Single-file responsive HTML + CSS portfolio. Replace placeholders (NAME, BIO, links, images).
+  Save as: index.html
+  Put project screenshots in ./assets/ (e.g. assets/tic-tac-toe.png)
+  Deploy: GitHub Pages (branch: main) or serve via any static host.
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Afifa — CSE Student & AI / Web Developer</title>
+  <meta name="description" content="Afifa — CSE 5th semester. Projects: Expense & Income Tracker, Blood Bank Management System, Skill-Based Task Collaboration Platform. Skills: C, Java, Python, HTML, CSS." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#06b6d4; --glass: rgba(255,255,255,0.03);
+      --radius:12px; --maxw:1100px;
+      --gradient: linear-gradient(135deg,#0ea5a4 0%, #7c3aed 100%);
+      --mono: 'Segoe UI', Roboto, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:var(--mono);background:linear-gradient(180deg,#071022 0%, #071829 100%);color:#e6eef6}
+    .wrap{max-width:var(--maxw);margin:40px auto;padding:28px}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:18px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:28px}
+    h1{margin:0;font-size:28px}
+    .sub{color:var(--muted);margin-top:6px}
+    .cta{margin-left:auto}
+    .btn{background:var(--gradient);padding:10px 16px;border-radius:10px;color:#021018;border:none;cursor:pointer;font-weight:600}
+
+    main{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
+    @media (max-width:980px){main{grid-template-columns:1fr} .cta{margin-left:0} }
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:var(--radius);box-shadow: 0 6px 18px rgba(2,6,23,0.6);}
+    .section-title{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+    .section-title h3{margin:0}
+
+    /* ABOUT */
+    .about p{color:var(--muted);line-height:1.6}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .chip{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600}
+
+    /* PROJECTS */
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    @media (max-width:760px){.projects{grid-template-columns:1fr}}
+    .proj{display:flex;gap:12px;align-items:center;padding:10px;border-radius:10px;background:rgba(255,255,255,0.02)}
+    .proj img{width:110px;height:70px;object-fit:cover;border-radius:8px}
+    .proj .meta{flex:1}
+    .proj h4{margin:0;font-size:16px}
+    .proj p{margin:6px 0 0;color:var(--muted);font-size:13px}
+    .proj .links{margin-top:8px;display:flex;gap:8px}
+    .link{font-size:13px;color:var(--accent);text-decoration:none;padding:6px 8px;border-radius:8px;background:rgba(6,182,212,0.06)}
+
+    /* SIDEBAR */
+    .profile{display:flex;flex-direction:column;gap:12px}
+    .stat{display:flex;justify-content:space-between;padding:10px;border-radius:8px;background:rgba(255,255,255,0.02)}
+    .contact a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px}
+
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar">AS</div>
+      <div>
+        <h1>Afifa Islam Chowdhury Sabiha</h1>
+        <div class="sub">CSE 5th Semester • AI & Web Developer • Building projects with Python, Java & Node.js</div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="#projects">View Projects</a>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <section class="card about">
+          <div class="section-title"><h3>About Me</h3></div>
+          <p>
+            I am a Computer Science student, studying at North East University Bangladesh. I enjoy building projects related to AI, web development and software engineering. I am experienced in C, Java, Python and familiar with C++ and frontend tech (HTML, CSS ,JavaScript) and backend(Node.js,Express.js)
+          </p>
+
+          <div style="margin-top:12px">
+            <strong>Key Courses:</strong>
+            <div class="skills" style="margin-top:8px">
+              <div class="chip">Structured Programming Language (C)</div> 
+              <div class="chip">Data Structures & Algorithms</div>
+              <div class="chip">OOP (Java)</div>
+              <div class="chip">Artificial Intelligence</div>
+              <div class="chip">Operating Systems</div>
+              <div class="chip">Database Systems</div>
+            </div>
+          </div>
+
+        </section>
+
+        <section id="projects" class="card" style="margin-top:18px">
+          <div class="section-title"><h3>Projects</h3></div>
+
+          <div class="projects">
+
+            <div class="proj">
+              <img src="assets/expense.png" alt="Expense Tracker screenshot">
+              <div class="meta">
+                <h4>Expense & Income Tracker</h4>
+                <p>HTML,CSS,JavaScript For frontend  + Node.js app with MySQL backend. Signup/login, Dashboard, Profile, add expenses and income Category wise & Showing all in an pie-chart,generate monthly and annually reports.</p>
+                <div class="links">
+                  <a class="link" href="#">Repo</a>
+                  <a class="link" href="#">Live</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="proj">
+              <img src="assets/bloodbank.png" alt="Blood Bank screenshot">
+              <div class="meta">
+                <h4>Blood Bank Management System</h4>
+                <p>Express + Node.js backend; includes donor registry, blood inventory and request handling.</p>
+                <div class="links">
+                  <a class="link" href="#">Repo</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="proj">
+              <img src="assets/skill-platform.png" alt="Skill Platform screenshot">
+              <div class="meta">
+                <h4>Skill-Based Task Collaboration Platform</h4>
+                <p>Ongoing project: a platform to match tasks with users based on skills and availability.</p>
+                <div class="links">
+                  <a class="link" href="#">Repo</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="proj">
+              <img src="assets/ai-games.png" alt="AI Games screenshot">
+              <div class="meta">
+                <h4>AI Games Collection</h4>
+                <p>Tic Tac Toe, Chess, Subtraction — AI opponents implemented using Minimax & Alpha-Beta.</p>
+                <div class="links">
+                  <a class="link" href="#">Repo</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:18px">
+          <div class="section-title"><h3>Education & Achievements</h3></div>
+          <p style="color:var(--muted);line-height:1.6">CSE Undergraduate • Completed courses: SPL (C), Data Structures & Algorithms, AD&A, OOP (Java), OS, AI, DB. Completed 2 projects and actively working on another.</p>
+        </section>
+
+      </div>
+
+      <aside class="card profile">
+        <div style="text-align:center">
+          <h3>Skills</h3>
+          <div class="skills" style="justify-content:center;margin-top:10px">
+            <div class="chip">C</div>
+            <div class="chip">Java</div>
+            <div class="chip">Python</div>
+            <div class="chip">C++</div>
+            <div class="chip">HTML</div>
+            <div class="chip">CSS</div>
+            <div class="chip">Node.js</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <div class="stat"><strong>Projects</strong><span>3+</span></div>
+          <div class="stat" style="margin-top:8px"><strong>Experience</strong><span>Student / Academic</span></div>
+        </div>
+
+        <div style="margin-top:14px" class="contact">
+          <h4>Contact</h4>
+          <a href="mailto:your.email@example.com">afifa....@gmail.com</a>
+          <a href="https://github.com/your-username" target="_blank">github.com/AfifaSabiha50</a>
+          <a href="#">LinkedIn</a>
+        </div>
+
+        <div style="margin-top:12px;text-align:center">
+          <a class="link" href="#" style="display:inline-block">Download CV</a>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer>
+      © Afifa Islam Chowdhury Sabiha • CSE Student • North East University Bangladesh
+    </footer>
+  </div>
+</body>
+</html>
